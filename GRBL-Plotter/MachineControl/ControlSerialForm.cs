@@ -717,7 +717,8 @@ namespace GrblPlotter
                 serialPort.Parity = System.IO.Ports.Parity.None;
                 serialPort.StopBits = System.IO.Ports.StopBits.One;
                 serialPort.Handshake = System.IO.Ports.Handshake.None;
-                serialPort.DtrEnable = false;
+                serialPort.DtrEnable = true;
+                serialPort.RtsEnable = true;
                 serialPort.ReadTimeout = 1000;
                 serialPort.WriteTimeout = 1000;
 
@@ -911,13 +912,13 @@ namespace GrblPlotter
                 try
                 {
                     timerSerial.Enabled = false;
-                    serialPort.DtrEnable = true;
+                    //serialPort.DtrEnable = false;
                     StateReset(savePos);
                     serialPort.DiscardInBuffer();
                     serialPort.DiscardOutBuffer();
                     AddToLog("> DTR/RTS reset");
-                    serialPort.DtrEnable = false;
-                    serialPort.RtsEnable = false;
+                    //serialPort.DtrEnable = true;
+                    //serialPort.RtsEnable = false;
                     if (iamSerial == 1)
                     {
                         Grbl.lastMessage = "Hard-RESET, waiting for response of grbl-controller";
