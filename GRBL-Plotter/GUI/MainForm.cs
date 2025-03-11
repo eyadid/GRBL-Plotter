@@ -1119,7 +1119,7 @@ namespace GrblPlotter
         private void BtnZeroY_Click(object sender, EventArgs e)
         { SendCommands((Grbl.isMarlin ? "G92" : zeroCmd) + " Y0.000"); }
         private void BtnZeroZ_Click(object sender, EventArgs e)
-        { SendCommands((Grbl.isMarlin ? "G92" : zeroCmd) + " Z0.000"); }
+        { SendCommands((Grbl.isMarlin ? "G92" : zeroCmd) + " Z18.000"); }
         private void BtnZeroA_Click(object sender, EventArgs e)
         { SendCommands((Grbl.isMarlin ? "G92" : zeroCmd) + " " + ctrl4thName + "0.000"); }
         private void BtnZeroB_Click(object sender, EventArgs e)
@@ -1129,7 +1129,7 @@ namespace GrblPlotter
         private void BtnZeroXY_Click(object sender, EventArgs e)
         { SendCommands((Grbl.isMarlin ? "G92" : zeroCmd) + " X0.000 Y0.000"); }
         private void BtnZeroXYZ_Click(object sender, EventArgs e)
-        { SendCommands((Grbl.isMarlin ? "G92" : zeroCmd) + " X0.000 Y0.000 Z0.000"); }
+        { SendCommands((Grbl.isMarlin ? "G92" : zeroCmd) + " X0.000 Y0.000 Z18.000"); }
 
         private void BtnSetCoordX_Click(object sender, EventArgs e)
         { SendCommands((Grbl.isMarlin ? "G92" : zeroCmd) + string.Format(" X{0:0.000}",NudSetCoordX.Value)); }    // zeroCmd = "G10 L20 P0";

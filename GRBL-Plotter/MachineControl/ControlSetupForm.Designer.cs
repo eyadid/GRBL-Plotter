@@ -6458,6 +6458,11 @@ namespace GrblPlotter
             0,
             0,
             0});
+            this.nUDImportGCZUp.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
             this.nUDImportGCZUp.Name = "nUDImportGCZUp";
             this.toolTip1.SetToolTip(this.nUDImportGCZUp, resources.GetString("nUDImportGCZUp.ToolTip"));
             this.nUDImportGCZUp.Value = global::GrblPlotter.Properties.Settings.Default.importGCZUp;
